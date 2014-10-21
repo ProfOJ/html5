@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head runat="server"> 
+<title>Untitled Page</title> 
+
+<script language="javascript"> 
+function next(n) 
+{ 
+document.getElementById(n).style.backgroundColor="yellow"; 
+
+} 
+
+</script> 
+
+<script type="text/javascript"> 
+document.onkeyup = KeyCheck; 
+document.onk 
+function KeyCheck() 
+{ 
+var KeyID = event.keyCode; 
+if(KeyID==38 ) 
+{ 
+alert('Up'); 
+} 
+if(KeyID==40) 
+{ 
+alert('Down'); 
+} 
+} 
+</script> 
+
+</head> 
+<body> 
+<form id="form1" runat="server"> 
+<div> 
+<a name="1" id="1">first Link</a> <a href="#2" onclick="next(2)">Next</a> 
+<br /> 
+<br /> 
+<br /> 
+<a name="2" id="2">first Link</a> <a href="#3" onclick="next(3)">Next</a> 
+<br /> 
+<br /> 
+<br /> 
+<a name="3" id="3">first Link</a> <a href="#4" onclick="next(4)">Next</a> 
+<br /> 
+<br /> 
+<br /> 
+<a name="4" id="4">first Link</a> <a href="#5" onclick="next(5)">Next</a> 
+<br /> 
+<br /> 
+<br /> 
+
+</div> 
+</form> 
+</body> 
+</html>
