@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="1340" height="680" style="border:1px solid #c3c3c3;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script>
+
+//var c=document.getElementById("myCanvas");
+//var ctx=c.getContext("2d");
+//ctx.fillStyle="#FF0000";
+//ctx.fillRect(0,0,150,75);
+
+
+var myVar=setInterval(function(){screenSaver()},3000);
+//var myVar1=setInterval(function(){clearScreen()},4000);
+//clear screen after a while
+function clearScreen(){
+	document.getElementById("myCanvas").style.background = '#ffffff';
+}
+//screen saver
+function screenSaver()
+{
+var c=document.getElementById("myCanvas");
+for(var i = 1; i<10; i++){
+	var radius=Math.floor(Math.random()*800)
+	var x=Math.floor(Math.random()*2400)
+	var y=Math.floor(Math.random()*400)
+	var ctx=c.getContext("2d");
+	ctx.beginPath();
+	ctx.arc(x,y,radius,0,2*Math.PI);
+	ctx.lineWidth = i;
+	var color = 'red';
+	if(i%2==0) color = 'yellow';
+	if(i%3==0) color = 'green';
+	ctx.strokeStyle = color;
+	ctx.stroke();
+}
+}
+</script>
+
+</body>
+</html><!--<!DOCTYPE html>
+ 
+<html>
+        <head>
+                <title>Learning the basics of canvas</title>
+                <meta charset="utf-8">
+ <style>
+#myCanvas{
+   border:1px solid red;
+}
+</style>
+ 
+<script language="javascript">
+	var can  = document.getElementById("myCanvas");
+	//if(can.getContext){ 
+		var ctx = can.getContext("2d"); 
+		ctx.fillStyle = "rgb(250, 0, 0)";  
+		ctx.arc(230, 90, 50, 0, Math.PI*2, false);
+	//} else {   
+		alert('Get Chrome, browser not supported!');
+//}  
+</script>
+        </head>
+ 
+        <body>
+                <canvas id="myCanvas" width="900" height="600"></canvas>
+        </body>
+</html>
+-->
